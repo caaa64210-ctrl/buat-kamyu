@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Jangan Klik!</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #startBtn {
+            padding: 20px 40px;
+            font-size: 20px;
+            cursor: pointer;
+            background: red;
+            border: none;
+            color: white;
+            border-radius: 10px;
+        }
+        video {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<button id="startBtn">Klik di sini 😈</button>
+
+<video id="jumpscareVideo" src="jumpscare.mp4"></video>
+
+<script>
+    const btn = document.getElementById("startBtn");
+    const video = document.getElementById("jumpscareVideo");
+
+    btn.onclick = () => {
+        btn.style.display = "none";
+        video.style.display = "block";
+        video.play();
+        video.volume = 1.0;
+    };
+</script>
+
+</body>
+</html>
